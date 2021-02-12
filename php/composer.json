@@ -1,0 +1,15 @@
+{
+    "name": "vinicius/demo-php",
+    "description": "um projeto para teste",
+    "authors": [
+        {
+            "name": "Marcos Vinicius",
+            "email": "viniciusmr1499@gmail.com"
+        }
+    ],
+    "require": {
+        "brainfoolong/cryptojs-aes-php": "^2.1",
+        "phpaes/phpaes": "^3.1",
+        "hemiframe/php-aes": "^1.2"
+    }
+}
