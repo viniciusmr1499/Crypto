@@ -29,15 +29,15 @@ class CryptoService {
 
     public function Encrypt(string $message): string 
     {
-        $mensagem_encriptografada = openssl_encrypt($message, $this->algorithm, $this->key, OPENSSL_RAW_DATA, $this->iv);
+        $cipher_message = openssl_encrypt($message, $this->algorithm, $this->key, OPENSSL_RAW_DATA, $this->iv);
         
-        return base64_encode($mensagem_encriptografada);
+        return base64_encode($cipher_message);
     }
 
     public function Decrypt(string $cipher_message): string
     {        
-        $mensagemDescriptografada = openssl_decrypt(base64_decode($cipher_message), $this->algorithm, $this->key, OPENSSL_RAW_DATA, $this->iv);
+        $decrypt_message = openssl_decrypt(base64_decode($cipher_message), $this->algorithm, $this->key, OPENSSL_RAW_DATA, $this->iv);
         
-        return $mensagemDescriptografada;
+        return $decrypt_message;
     }
 }
